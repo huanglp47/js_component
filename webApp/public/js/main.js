@@ -61,7 +61,8 @@ require([
 	'widgets/alert/alert',
 	'widgets/pop/pop',
 	'widgets/confirm/confirm',
-], function($, Add, JqDemoPlugin, _, GobalAlert,Pop, Confirm){
+	'widgets/loadCssOrJs/loadCssOrJs'
+], function($, Add, JqDemoPlugin, _, GobalAlert,Pop, Confirm, LoadCssOrJs){
 
 	var $myDiv = $('#myDiv');
 
@@ -107,5 +108,22 @@ require([
 			'title': '确定要离开？'	
 		};
 		new Confirm(opts);
+	});
+
+	
+	$('#testLoadStat1').on('click', function(){
+		new LoadCssOrJs('test.js', 'js');
+	});
+	$('#testLoadStat2').on('click', function(){
+		new LoadCssOrJs('test.css', 'CSS');
+	});
+	$('#testLoadStat3').on('click', function(){
+		new LoadCssOrJs(['test1.js', 'test2.js'], 'js');
+	});
+	$('#testLoadStat4').on('click', function(){
+		new LoadCssOrJs(['test1.js', 'test2.css', 'test9.js', 'test9.Js', 'test111.CSS'], '');
+	});
+	$('#testLoadStat5').on('click', function(){
+		new LoadCssOrJs(['test41.js', 'aa/ss/ddd/test141.CSS']);
 	});
 });
