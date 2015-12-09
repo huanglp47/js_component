@@ -1,5 +1,6 @@
 # js_component
 js components常用组件封装 （目录js/widgets） 
+------
 
 使用requireJs模块化加载，js原型继承.  
 目前效果有:  
@@ -8,6 +9,7 @@ Pop弹框(支持iframe)，
 confirm  
 
 2015-12-09  
+------
 
 [loadCssOrJs/loadCssOrJs.js](https://github.com/huanglp47/js_component/tree/master/webApp/public/js/widgets/loadCssOrJs)  
 
